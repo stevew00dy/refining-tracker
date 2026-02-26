@@ -72,7 +72,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-50 border-b border-dark-700 bg-dark-900/95 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="max-w-[1600px] mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg bg-accent-amber/15 flex items-center justify-center">
               <Flame size={20} className="text-accent-amber" />
@@ -125,7 +125,7 @@ export default function App() {
       </header>
 
       <nav className="border-b border-dark-700 bg-dark-900/80">
-        <div className="max-w-7xl mx-auto px-4 flex gap-1 overflow-x-auto">
+        <div className="max-w-[1600px] mx-auto px-4 flex gap-1 overflow-x-auto">
           {tabs.map((t) => {
             const Icon = t.icon;
             return (
@@ -146,7 +146,7 @@ export default function App() {
         </div>
       </nav>
 
-      <main className="flex-1 max-w-7xl mx-auto w-full px-4 py-6">
+      <main className="flex-1 max-w-[1600px] mx-auto w-full px-4 py-6">
         {loading ? (
           <div className="flex flex-col items-center justify-center py-24">
             <Loader2 size={36} className="text-accent-amber animate-spin mb-4" />
@@ -180,7 +180,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-dark-700 bg-dark-900/60 py-6 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+        <div className="max-w-[1600px] mx-auto px-4 text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-3">
             {TOOL_LINKS.map((link) => (
               <a
