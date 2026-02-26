@@ -102,17 +102,17 @@ export default function App() {
               </button>
               {navOpen && (
                 <div className="fixed sm:absolute right-2 sm:right-0 top-14 sm:top-full sm:mt-2 w-[calc(100vw-1rem)] sm:w-56 max-w-[14rem] p-2 shadow-xl z-50 rounded-xl border border-dark-700 bg-dark-900">
-                  <a href="/" className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">
-                    <Home className="w-3.5 h-3.5 text-accent-amber" />
-                    undisputed noobs
-                  </a>
-                  <div className="border-t border-dark-700 my-1.5" />
+                  <h3 className="text-[10px] font-semibold text-text-dim uppercase tracking-wide mb-1.5">Tools</h3>
                   <a href="/armor-tracker/" className="block px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">Rare Armor Tracker</a>
                   <a href="/exec-hangar-tracker/" className="block px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">Exec Hangar Tracker</a>
                   <a href="/wikelo-tracker/" className="block px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">Wikelo Tracker</a>
                   <a href="/loadout-planner/" className="block px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">FPS Loadout Tracker</a>
                   <a href="/refining-tracker/" className="block px-3 py-2 rounded-lg text-xs text-accent-amber font-medium">Refining Tracker</a>
                   <div className="border-t border-dark-700 my-1.5" />
+                  <a href="/" className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">
+                    <Home className="w-3.5 h-3.5 text-accent-amber" />
+                    Undisputed Noobs
+                  </a>
                   <a href="https://robertsspaceindustries.com/enlist?referral=STAR-23GB-5J3N" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between px-3 py-2 rounded-lg text-xs text-accent-blue hover:bg-dark-700 transition-all duration-200">
                     Play Star Citizen
                     <span className="text-[10px] text-text-muted">↗</span>
