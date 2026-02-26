@@ -102,7 +102,7 @@ export default function App() {
                 <Menu size={16} className="text-text-dim" />
               </button>
               {navOpen && (
-                <div className="absolute right-0 top-full mt-2 w-56 rounded-xl border border-dark-700 bg-dark-900/98 backdrop-blur-md shadow-2xl py-2 z-50">
+                <div className="fixed sm:absolute right-2 sm:right-0 top-14 sm:top-full sm:mt-2 w-[calc(100vw-1rem)] sm:w-56 max-w-[14rem] rounded-xl border border-dark-700 bg-dark-900/98 backdrop-blur-md shadow-2xl py-2 z-50">
                   <div className="px-3 py-1.5 text-[10px] uppercase tracking-wider text-text-muted font-semibold">
                     Tools
                   </div>
