@@ -16,14 +16,6 @@ import { getRefiningData, clearCache, type RefiningData } from "./uex-api";
 
 type Tab = "optimizer" | "methods" | "stations";
 
-const TOOL_LINKS = [
-  { name: "Rare Armor Tracker", href: "/armor-tracker/" },
-  { name: "Exec Hangar Tracker", href: "/exec-hangar-tracker/" },
-  { name: "Wikelo Tracker", href: "/wikelo-tracker/" },
-  { name: "FPS Loadout Tracker", href: "/loadout-planner/" },
-  { name: "Refining Tracker", href: "/refining-tracker/" },
-];
-
 export default function App() {
   const [tab, setTab] = useState<Tab>("optimizer");
   const [data, setData] = useState<RefiningData | null>(null);
@@ -179,29 +171,18 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-dark-700 bg-dark-900/60 py-6 mt-auto">
-        <div className="max-w-[1600px] mx-auto px-4 text-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-3">
-            {TOOL_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`text-xs transition-colors ${
-                  link.href === "/refining-tracker/"
-                    ? "text-accent-amber"
-                    : "text-text-dim hover:text-text-secondary"
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
+      <footer className="border-t border-dark-700 mt-12 py-6">
+        <div className="max-w-[1600px] mx-auto px-4 flex flex-col items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
+            <a href="/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">Home</a>
+            <a href="/armor-tracker/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">Rare Armor Tracker</a>
+            <a href="/exec-hangar-tracker/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">Exec Hangar Tracker</a>
+            <a href="/wikelo-tracker/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">Wikelo Tracker</a>
+            <a href="/loadout-planner/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">FPS Loadout Tracker</a>
+            <a href="/refining-tracker/" className="text-xs text-accent-amber font-medium">Refining Tracker</a>
+            <a href="https://www.youtube.com/@undisputednoobs" target="_blank" rel="noopener noreferrer" className="text-xs text-text-muted hover:text-accent-amber transition-colors">YouTube</a>
           </div>
-          <a
-            href="/"
-            className="text-xs text-text-muted hover:text-text-dim transition-colors"
-          >
-            undisputednoobs.com
-          </a>
+          <p className="text-[10px] text-text-muted/50">Unofficial fan-made tool. Not affiliated with Cloud Imperium Games. All data may be inaccurate — use at your own risk.</p>
         </div>
       </footer>
     </div>
