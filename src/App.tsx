@@ -8,7 +8,6 @@ import {
   ArrowUpDown,
   Building2,
   Loader2,
-  Rocket,
 } from "lucide-react";
 import Optimizer from "./components/Optimizer";
 import MethodComparison from "./components/MethodComparison";
@@ -102,40 +101,21 @@ export default function App() {
                 <Menu size={16} className="text-text-dim" />
               </button>
               {navOpen && (
-                <div className="fixed sm:absolute right-2 sm:right-0 top-14 sm:top-full sm:mt-2 w-[calc(100vw-1rem)] sm:w-56 max-w-[14rem] rounded-xl border border-dark-700 bg-dark-900/98 backdrop-blur-md shadow-2xl py-2 z-50">
-                  <div className="px-3 py-1.5 text-[10px] uppercase tracking-wider text-text-muted font-semibold">
-                    Tools
-                  </div>
-                  {TOOL_LINKS.map((link) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      className={`block px-3 py-2 text-xs transition-colors ${
-                        link.href === "/refining-tracker/"
-                          ? "text-accent-amber bg-accent-amber/5"
-                          : "text-text-secondary hover:bg-dark-700"
-                      }`}
-                    >
-                      {link.name}
-                    </a>
-                  ))}
-                  <div className="border-t border-dark-700 my-1.5" />
-                  <a
-                    href="/"
-                    className="flex items-center gap-2 px-3 py-2 text-xs text-text-dim hover:bg-dark-700 transition-colors"
-                  >
-                    <Home size={12} /> Undisputed Noobs
+                <div className="fixed sm:absolute right-2 sm:right-0 top-14 sm:top-full sm:mt-2 w-[calc(100vw-1rem)] sm:w-56 max-w-[14rem] p-2 shadow-xl z-50 rounded-xl border border-dark-700 bg-dark-900">
+                  <a href="/" className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">
+                    <Home className="w-3.5 h-3.5 text-accent-amber" />
+                    undisputed noobs
                   </a>
-                  <a
-                    href="https://robertsspaceindustries.com/enlist?referral=STAR-23GB-5J3N"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between px-3 py-2 text-xs text-accent-blue hover:bg-dark-700 transition-colors"
-                  >
-                    <span className="flex items-center gap-2">
-                      <Rocket size={12} /> Play Star Citizen
-                    </span>
-                    <span className="text-[10px] text-text-muted">Referral</span>
+                  <div className="border-t border-dark-700 my-1.5" />
+                  <a href="/armor-tracker/" className="block px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">Rare Armor Tracker</a>
+                  <a href="/exec-hangar-tracker/" className="block px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">Exec Hangar Tracker</a>
+                  <a href="/wikelo-tracker/" className="block px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">Wikelo Tracker</a>
+                  <a href="/loadout-planner/" className="block px-3 py-2 rounded-lg text-xs text-text-dim hover:text-text hover:bg-dark-700 transition-all duration-200">FPS Loadout Tracker</a>
+                  <a href="/refining-tracker/" className="block px-3 py-2 rounded-lg text-xs text-accent-amber font-medium">Refining Tracker</a>
+                  <div className="border-t border-dark-700 my-1.5" />
+                  <a href="https://robertsspaceindustries.com/enlist?referral=STAR-23GB-5J3N" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between px-3 py-2 rounded-lg text-xs text-accent-blue hover:bg-dark-700 transition-all duration-200">
+                    Play Star Citizen
+                    <span className="text-[10px] text-text-muted">↗</span>
                   </a>
                 </div>
               )}
